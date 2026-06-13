@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Katz 3D Kreationz Admin</title>
+</head>
+
+<body>
+
+<h1>Order Management</h1>
+
+<button onclick="loadOrders()">Load Orders</button>
+
+<div id="orders"></div>
+
+<script>
+
+function loadOrders(){
+
+let orders = JSON.parse(localStorage.getItem("orders")) || []
+
+let html=""
+
+orders.forEach(order=>{
+
+html += `
+<div style="border:1px solid black;padding:10px;margin:10px">
+
+Order ID: ${order.orderId}<br>
+
+Status:
+<select onchange="updateStatus('${order.orderId}',this.value)">
+
+<option ${order.status=="Order Received"?"selected":""}>Order Received</option>
+<option ${order.status=="Printing"?"selected":""}>Printing</option>
+<option ${order.status=="Shipped"?"selected":""}>Shipped</option>
+<option ${order.status=="Delivered"?"selected":""}>Delivered</option>
+
+</select>
+
+<br>
+
+Tracking:
+<input value="${order.tracking}" onchange="updateTracking('${order.orderId}',this.value)">
+
+</div>
+`
+
+})
+
+document.getElementById("orders").innerHTML=html
+
+}
+
+function updateStatus(id,status){
+
+let orders = JSON.parse(localStorage.getItem("orders"))
+
+let order = orders.find(o=>o.orderId===id)
+
+order.status=status
+
+localStorage.setItem("orders",JSON.stringify(orders))
+
+}
+
+function updateTracking(id,tracking){
+
+let orders = JSON.parse(localStorage.getItem("orders"))
+
+let order = orders.find(o=>o.orderId===id)
+
+order.tracking=tracking
+
+localStorage.setItem("orders",JSON.stringify(orders))
+
+}
+
+</script>
+
+</body>
+
+</html>

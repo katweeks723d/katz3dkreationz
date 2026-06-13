@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+<h1 id="product-name"></h1>
+</header>
+
+<section style="padding:40px; text-align:center;">
+
+<!-- MAIN IMAGE -->
+<img id="main-image" style="width:300px; display:block; margin:auto;">
+
+<!-- THUMBNAILS -->
+<div id="gallery"></div>
+
+<h2 id="product-title"></h2>
+
+<p id="product-desc"></p>
+
+<h3 id="product-price"></h3>
+
+<button onclick="addToCartFromPage()">Add to Cart</button>
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get("name");
+const price = params.get("price");
+const image = params.get("image");
+const desc = params.get("desc");
+
+// split multiple images
+const images = image.split(",");
+
+// fill content
+document.getElementById("product-name").innerText = name;
+document.getElementById("product-title").innerText = name;
+document.getElementById("product-price").innerText = "$" + price;
+document.getElementById("product-desc").innerText = desc;
+
+// main image
+const mainImage = document.getElementById("main-image");
+mainImage.src = images[0];
+
+// thumbnails
+const gallery = document.getElementById("gallery");
+
+images.forEach(img => {
+const thumb = document.createElement("img");
+thumb.src = img;
+thumb.style.width = "80px";
+thumb.style.margin = "5px";
+thumb.style.cursor = "pointer";
+
+thumb.onclick = () => {
+mainImage.src = img;
+};
+
+gallery.appendChild(thumb);
+});
+
+// add to cart
+function addToCartFromPage(){
+addToCart(name, parseFloat(price));
+}
+</script>
+
+</body>
+</html>

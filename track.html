@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Katz 3D Kreationz - Track Order</title>
+</head>
+
+<body>
+
+<h1>Track Your Order</h1>
+
+<input id="orderInput" placeholder="Enter Order ID">
+
+<button onclick="trackOrder()">Track</button>
+
+<p id="result"></p>
+
+<script>
+
+function trackOrder(){
+
+let orderId=document.getElementById("orderInput").value
+
+let orders = JSON.parse(localStorage.getItem("orders")) || []
+
+let order = orders.find(o=>o.orderId===orderId)
+
+if(order){
+
+document.getElementById("result").innerHTML =
+"Status: "+order.status+"<br>Tracking: "+order.tracking
+
+}else{
+
+document.getElementById("result").innerHTML="Order not found"
+
+}
+
+}
+
+</script>

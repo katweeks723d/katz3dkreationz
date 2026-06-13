@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Katz 3D Kreationz - Order Confirmation</title>
+</head>
+
+<body>
+
+<h1>Thank You For Your Order!</h1>
+
+<p>Your payment was successful.</p>
+
+<p>Your Order ID:</p>
+
+<h2 id="orderId"></h2>
+
+<p>Please save this ID to track your order.</p>
+
+<a href="track.html">Track Your Order</a>
+
+<script>
+
+function generateOrderID(){
+return "K3D" + Date.now()
+}
+
+let orderID = generateOrderID()
+
+document.getElementById("orderId").innerText = orderID
+
+// Load existing orders
+let orders = JSON.parse(localStorage.getItem("orders")) || []
+
+// Add new order
+orders.push({
+orderId: orderID,
+status: "Order Received",
+tracking: "Not shipped yet"
+})
+
+// Save orders
+localStorage.setItem("orders", JSON.stringify(orders))
+
+</script>

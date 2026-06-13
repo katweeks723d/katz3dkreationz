@@ -1,0 +1,353 @@
+# Enhanced `lithophane.html` Page
+
+Copy and paste this entire file into your `lithophane.html`.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+Custom 3D Printed Lithophanes | Katz 3D Kreationz
+</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Order custom 3D printed lithophanes from Katz 3D Kreationz. Turn your favorite photos into beautiful illuminated lithophane prints.">
+
+<meta name="keywords"
+content="custom lithophane, photo lithophane, 3D printed lithophane, custom night light, memorial lithophane, lithophane lamp">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#f5f5f5;
+}
+
+header{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+header img{
+height:90px;
+}
+
+.navbar{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:15px;
+background:#222;
+flex-wrap:wrap;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:50px 20px;
+background:white;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.6;
+}
+
+.hero img{
+width:300px;
+max-width:90%;
+border-radius:15px;
+margin-top:25px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.section{
+padding:40px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.feature-box{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+form{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+max-width:700px;
+margin:auto;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-top:5px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:black;
+color:white;
+padding:15px 25px;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#444;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo.png" alt="Katz 3D Kreationz Logo">
+
+</header>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="lithophane.html">Custom Lithophanes</a>
+<a href="track.html">Track Order</a>
+
+</nav>
+
+<section class="hero">
+
+<h1>Custom 3D Printed Lithophanes</h1>
+
+<p>
+Turn your favorite photos into beautiful glowing 3D printed lithophanes.
+Perfect for memorial gifts, night lights, anniversaries, pet memorials,
+and personalized home decor.
+</p>
+
+<img src="images/lithophane-example.jpg"
+alt="Custom 3D printed lithophane example">
+
+</section>
+
+<section class="section">
+
+<h2>Why Customers Love Lithophanes</h2>
+
+<div class="features">
+
+<div class="feature-box">
+<h3>Personalized Gifts</h3>
+<p>
+Create meaningful gifts using your own family photos,
+pet pictures, or special memories.
+</p>
+</div>
+
+<div class="feature-box">
+<h3>Beautiful Illumination</h3>
+<p>
+Lithophanes reveal incredible detail when light shines through them.
+</p>
+</div>
+
+<div class="feature-box">
+<h3>Perfect Keepsakes</h3>
+<p>
+Great for weddings, memorials, anniversaries,
+and custom night lights.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Example Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/lithophane-example.jpg"
+alt="Custom lithophane example">
+
+<img src="images/lithophane-example2.jpg"
+alt="Illuminated lithophane print">
+
+<img src="images/lithophane-example3.jpg"
+alt="Custom 3D printed photo lithophane">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Order Your Custom Lithophane</h2>
+
+<form>
+
+<label>Your Name</label>
+<input type="text" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Upload Your Photo</label>
+<input type="file" accept="image/*" required>
+
+<label>Select Lithophane Option</label>
+<select>
+<option>Square Lithophane (4x4) - $20</option>
+<option>Night Light Lithophane - $10</option>
+<option>Hexagon Lithophane - $20</option>
+</select>
+
+<p>
+<strong>Hexagon Lithophane:</strong>
+Connect multiple hexagon lithophanes together to create any shape or layout you want. Each hexagon includes its own color-changing, dimmable light source.
+</p>
+
+<label>Choose Style</label>
+<select>
+<option>Flat Lithophane</option>
+<option>Curved Lithophane</option>
+<option>Lithophane Night Light</option>
+<option>Lithophane Lamp Shade</option>
+</select>
+
+<label>Special Requests</label>
+<textarea rows="5"
+placeholder="Add notes, memorial text, preferred colors, etc."></textarea>
+
+<button type="submit">
+Submit Custom Order
+</button>
+
+</form>
+
+</section>
+
+<section class="section">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What photo works best?</h3>
+<p>
+Clear, bright photos with good contrast work best for lithophanes.
+</p>
+
+<h3>How long does printing take?</h3>
+<p>
+Most lithophane orders are completed within 3-5 business days.
+</p>
+
+<h3>Can I use pet or memorial photos?</h3>
+<p>
+Absolutely. Memorial and pet lithophanes are some of our most popular orders.
+</p>
+
+</section>
+
+<footer>
+
+<p>
+Katz 3D Kreationz • West Monroe, Louisiana
+</p>
+
+<p>
+Custom 3D Printed Gifts & Lithophanes
+</p>
+
+</footer>
+
+</body>
+</html>
+```
+
+# Important
+
+Add these images to your `images` folder:
+
+```text
+lithophane-example.jpg
+lithophane-example2.jpg
+lithophane-example3.jpg
+```
+
+You can use your own lithophane photos.
+
+This improved page helps with:
+
+* Google SEO
+* Customer trust
+* Higher conversion rates
+* Google Images traffic
+* Professional appearance

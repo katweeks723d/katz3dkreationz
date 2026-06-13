@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Katz 3D Kreationz</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+
+<div class="logo-area">
+<img src="images/logo.png"
+alt="Katz 3D Kreationz Logo">
+
+<div class="site-text">
+<h1>Katz 3D Kreationz</h1>
+<p>Custom 3D Printed Gifts & Collectibles</p>
+<p>Email: katz3dkreationz@gmail.com</p>
+</div>
+
+</div>
+
+<div class="cart-button"
+onclick="toggleCart()">
+
+🛒 Cart (<span id="cart-count">0</span>)
+
+</div>
+
+</header>
+
+<nav class="navbar">
+
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="lithophane.html">
+Lithophanes
+</a>
+
+</nav>
+
+<section class="hero-banner">
+
+<h2>
+Premium 3D Printed Creations
+</h2>
+
+<p>
+Custom Lithophanes • Collectibles • Gifts
+</p>
+
+</section>
+
+<h2 class="category-title">
+🦁 Animals With Attitude™
+</h2>
+
+<section class="products">
+
+<!-- FOX SAKE -->
+<div class="product">
+
+<div class="image-container">
+<img src="images/fox_sake.jpg" alt="Fox">
+</div>
+
+<h2>Fox</h2>
+
+<p>Included Sign:</p>
+
+<p><strong>For Fox Sake</strong></p>
+
+<p>$10</p>
+
+<button onclick="addToCart('Fox - For Fox Sake',10)">
+Add To Cart
+</button>
+
+</div>
+
+<!-- BAA BYE -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/baa-bye.jpg"
+alt="Baa Bye">
+</div>
+
+<h2>Baa Bye</h2>
+
+<p>$10</p>
+
+<button
+onclick="addToCart('Baa Bye',10)">
+Add To Cart
+</button>
+
+</div>
+
+<!-- QUACK OFF -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/quack-off.jpg"
+alt="Quack Off">
+</div>
+
+<h2>Quack Off</h2>
+
+<label>Color:</label>
+
+<select id="quackColor">
+
+<option value="Black">
+Black
+</option>
+
+<option value="White">
+White
+</option>
+
+</select>
+
+<p>$10</p>
+
+<button
+onclick="addQuackToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- NO PROB LLAMA -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/no-prob-llama.jpg"
+alt="No Prob Llama">
+</div>
+
+<h2>No Prob Llama</h2>
+
+<label>Color:</label>
+
+<select id="llamaColor">
+
+<option value="Tan">
+Tan
+</option>
+
+<option value="Brown">
+Brown
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button
+onclick="addLlamaToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- NOT TODAY -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/not-today.jpg" alt="Not Today">
+</div>
+
+<h2>Not Today</h2>
+
+<p><strong>Included Sign:</strong></p>
+
+<p>Not Today</p>
+
+<p>$12</p>
+
+<button onclick="addToCart('Not Today',12)">
+Add To Cart
+</button>
+
+</div>
+<!-- RHINO -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/Rhino.jpg" alt="Rhino">
+</div>
+
+<h2>Rhino</h2>
+
+<label>Sign:</label>
+
+<select id="rhinoSign">
+
+<option value="Get to the Point">
+Get to the Point
+</option>
+
+<option value="I'm Horny">
+I'm Horny
+</option>
+
+<option value="Wanna Poke?">
+Wanna Poke?
+</option>
+
+</select>
+
+<p>$10</p>
+
+<button onclick="addRhinoToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- GOAT -->
+<div class="product">
+
+<div class="image-container">
+<img src="images/goat_awa.jpg" alt="Goat">
+</div>
+
+<h2>Goat</h2>
+
+<label>Sign:</label>
+
+<select id="goatSign">
+
+<option value="Eat Grass">
+Eat Grass
+</option>
+
+<option value="Bleat It!">
+Bleat It!
+</option>
+
+<option value="Goat Outta Here">
+Goat Outta Here
+</option>
+
+<option value="Don't Baa-ther Me">
+Don't Baa-ther Me
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addGoatToCart()">
+Add To Cart
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/hop_off.jpg"
+alt="Hop Off">
+</div>
+
+<h2>Hop Off</h2>
+
+<p>$10</p>
+
+<button
+onclick="addToCart('Hop Off',10)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/zero_cluck.jpg"
+alt="Zero Cluck">
+</div>
+
+<h2>Zero Cluck</h2>
+
+<p>$10</p>
+
+<button
+onclick="addToCart('Zero Cluck',10)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/donkey.jpg" alt="Donkey">
+</div>
+
+<h2>Donkey</h2>
+
+<label>Sign:</label>
+
+<select id="donkeySign">
+<option value="You're the ASS">You're the ASS</option>
+<option value="Smart Ass">Smart Ass</option>
+<option value="Don't Be an Ass">Don't Be an Ass</option>
+<option value="Don't ASS/U/ME">Don't ASS/U/ME</option>
+</select>
+
+<p>$10</p>
+
+<button onclick="addDonkeyToCart()">
+Add To Cart
+</button>
+
+</div>
+<div class="product">
+
+<div class="image-container">
+<img src="images/stinkin-tired.jpg" alt="Stinkin Tired">
+</div>
+
+<h2>Stinkin Tired</h2>
+
+<label>Sign:</label>
+
+<select id="stinkinSign">
+<option value="Stinkin Tired">Stinkin Tired</option>
+<option value="This Stinks">This Stinks</option>
+</select>
+
+<p>$12</p>
+
+<button onclick="addStinkinToCart()">
+Add To Cart
+</button>
+
+</div>
+<div class="product">
+
+<div class="image-container">
+<img src="images/eat-more-beef.jpg"
+alt="Eat More Beef">
+</div>
+
+<h2>Eat More Beef</h2>
+
+<label>Sign:</label>
+
+<select id="beefSign">
+
+<option value="Eat More Beef">
+Eat More Beef
+</option>
+
+<option value="Get Roasted">
+Get Roasted
+</option>
+
+<option value="Bawk Off">
+Bawk Off
+</option>
+
+<option value="I Love Legs & Thighs">
+I Love Legs & Thighs
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addBeefToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/snake.jpg" alt="Snake">
+</div>
+
+<h2>Snake</h2>
+
+<label>Sign:</label>
+
+<select id="snakeSign">
+
+<option value="Sssso Done">
+Sssso Done
+</option>
+
+<option value="Hiss Off">
+Hiss Off
+</option>
+
+<option value="Bite Me">
+Bite Me
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addSnakeToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- PLAY DEAD -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/play-dead.jpg" alt="Play Dead">
+</div>
+
+<h2>Play Dead</h2>
+
+<label>Sign:</label>
+
+<select id="playDeadSign">
+
+<option value="When You Talk I Play Dead">
+When You Talk I Play Dead
+</option>
+
+<option value="Dead Tired">
+Dead Tired
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addPlayDeadToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- UNBEARABLE -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/unbearable.jpg" alt="Unbearable">
+</div>
+
+<h2>Unbearable</h2>
+
+<label>Bear Color:</label>
+
+<select id="unbearableColor">
+
+<option value="Black">
+Black
+</option>
+
+<option value="Brown">
+Brown
+</option>
+
+</select>
+
+<label>Sign:</label>
+
+<select id="unbearableSign">
+
+<option value="Unbearable">
+Unbearable
+</option>
+
+<option value="Grin & Bear It">
+Grin & Bear It
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addUnbearableToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- OWL -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/Owl.jpg" alt="Owl">
+</div>
+
+<h2>Owl</h2>
+
+<label>Sign:</label>
+
+<select id="owlSign">
+
+<option value="Who Cares?">
+Who Cares?
+</option>
+
+<option value="Hoo Cares?">
+Hoo Cares?
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addOwlToCart()">
+Add To Cart
+</button>
+
+</div>
+<div class="product">
+
+<div class="image-container">
+<img src="images/squirrel.jpg" alt="Squirrel">
+</div>
+
+<h2>Squirrel</h2>
+
+<label>Sign:</label>
+
+<select id="squirrelSign">
+
+<option value="Eat My Nuts">
+Eat My Nuts
+</option>
+
+<option value="Nut Interested">
+Nut Interested
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addSquirrelToCart()">
+Add To Cart
+</button>
+
+</div>
+<!-- OINK IF I CARE -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/oink-if-i-care.jpg" alt="Oink If I Care">
+</div>
+
+<h2>Oink If I Care</h2>
+
+<p><strong>Included Sign:</strong></p>
+
+<p>Oink If I Care</p>
+
+<p>$12</p>
+
+<button onclick="addToCart('Oink If I Care',12)">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- BEAVER -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/beaver.jpg" alt="Beaver">
+</div>
+
+<h2>Beaver</h2>
+
+<label>Sign:</label>
+
+<select id="beaverSign">
+
+<option value="Log Off">
+Log Off
+</option>
+
+<option value="Dam Right">
+Dam Right
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addBeaverToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- GIRAFFE -->
+
+<!-- AWA GIRAFFE -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/AWA_Giraffe.jpg" alt="AWA Giraffe">
+</div>
+
+<h2>AWA Giraffe</h2>
+
+<label>Sign:</label>
+
+<select id="giraffeSign">
+
+<option value="ABOVE THE DRAMA">
+ABOVE THE DRAMA
+</option>
+
+<option value="NECKFLIX AND CHILL">
+NECKFLIX AND CHILL
+</option>
+
+<option value="HIGH STANDARDS">
+HIGH STANDARDS
+</option>
+
+<option value="LEAF ME ALONE!">
+LEAF ME ALONE!
+</option>
+
+<option value="ATTITUDE HEIGHTENED">
+ATTITUDE HEIGHTENED
+</option>
+
+<option value="NECKS LEVEL PETTY">
+NECKS LEVEL PETTY
+</option>
+
+</select>
+
+<p>$14</p>
+
+<button onclick="addAWAGiraffeToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- UNICORN -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/awa_unicorn.jpg" alt="Unicorn">
+</div>
+
+<h2>Unicorn</h2>
+
+<label>Sign:</label>
+
+<select id="unicornSign">
+
+<option value="Glitterally Over It">
+Glitterally Over It
+</option>
+
+<option value="Have a Magical F***ing Day">
+Have a Magical F***ing Day
+</option>
+
+<option value="Wish Denied">
+Wish Denied
+</option>
+
+</select>
+
+<p>$14</p>
+
+<button onclick="addUnicornToCart()">
+Add To Cart
+</button>
+
+
+</div>
+
+<!-- AXOLOTL -->
+
+<!-- AXOLOTL -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/axolotl.png" alt="Axolotl">
+</div>
+
+<h2>Axolotl</h2>
+
+<label>Color:</label>
+
+<select id="axolotlColor">
+
+<option value="Pink">
+Pink
+</option>
+
+<option value="Blue">
+Blue
+</option>
+
+<option value="Multi">
+Multi
+</option>
+
+</select>
+
+<label>Sign:</label>
+
+<select id="axolotlSign">
+
+<option value="Talks-A-Lotl">
+Talks-A-Lotl
+</option>
+
+<option value="Thanks-A-Lotl">
+Thanks-A-Lotl
+</option>
+
+</select>
+
+<p>$12</p>
+
+<button onclick="addAxolotlToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- AWA PANDA -->
+<!-- AWA PANDA -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/panda.jpg" alt="Panda">
+</div>
+
+<h2>Panda</h2>
+
+<label>Sign:</label>
+
+<select id="pandaSign">
+
+<option value="I'd Rather Be Napping">
+I'd Rather Be Napping
+</option>
+
+<option value="Bam-Boo-Hoo">
+Bam-Boo-Hoo
+</option>
+
+<option value="Nap First, Decisions Later">
+Nap First, Decisions Later
+</option>
+
+<option value="Eat. Nap. Repeat.">
+Eat. Nap. Repeat.
+</option>
+
+<option value="Bamboo-zled">
+Bamboo-zled
+</option>
+
+<option value="Bam-Boo">
+Bam-Boo
+</option>
+
+</select>
+
+<p>$11</p>
+
+<button onclick="addPandaToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- AWA CAT -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/AWA_Cat.jpg" alt="AWA Cat">
+</div>
+
+<h2>AWA Cat</h2>
+
+<label>Color:</label>
+
+<select id="awaCatColor">
+<option value="Orange">Orange</option>
+<option value="Gray">Gray</option>
+</select>
+
+<label>Sign:</label>
+
+<select id="awaCatSign">
+<option value="Purrhaps Not">Purrhaps Not</option>
+<option value="Ask The Dog">Ask The Dog</option>
+<option value="I Judge You">I Judge You</option>
+<option value="Feline Frustrated">Feline Frustrated</option>
+</select>
+
+<p>$14</p>
+
+<button onclick="addAWACatToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+<div class="image-container">
+<img src="images/AlienPug.jpg" alt="Alien Pug">
+</div>
+
+<h2>Alien Pug</h2>
+
+<p>$14</p>
+
+<button onclick="addToCart('Alien Pug',14)">
+Add To Cart
+</button>
+
+</div>
+<!-- ARCHIE CHIMP -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/ArchieChimp.jpg" alt="Archie Chimp">
+</div>
+
+<h2>Archie Chimp</h2>
+
+<label>Size:</label>
+
+<select id="archieSize">
+
+<option value="Small">
+Small - $8
+</option>
+
+<option value="Medium">
+Medium - $10
+</option>
+
+<option value="Large">
+Large - $12
+</option>
+
+</select>
+
+<button onclick="addArchieChimpToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/OllieOrangutang.jpg" alt="Ollie Orangutang">
+</div>
+
+<h2>Ollie Orangutang</h2>
+
+<label>Size:</label>
+
+<select id="ollieSize">
+
+<option value="Small">
+Small - $8
+</option>
+
+<option value="Medium">
+Medium - $10
+</option>
+
+<option value="Large">
+Large - $12
+</option>
+
+</select>
+
+<button onclick="addOllieToCart()">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- LIBERTY EAGLE -->
+<!-- LIBERTY EAGLE USA -->
+<div class="product">
+
+<div class="image-container">
+<img src="images/liberty_eagle_statueusa.jpg"
+alt="Liberty Eagle USA">
+</div>
+
+<h2>Liberty Eagle - USA Wings</h2>
+
+<p>$15</p>
+
+<button onclick="addToCart('Liberty Eagle - USA Wings',15)">
+Add To Cart
+</button>
+
+</div>
+
+<!-- LIBERTY EAGLE BROWN -->
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/liberty_eagle_statuebrown.jpg"
+alt="Liberty Eagle Brown">
+</div>
+
+<h2>Liberty Eagle - Brown Wings</h2>
+
+<p>$15</p>
+
+<button onclick="addToCart('Liberty Eagle - Brown Wings',15)">
+Add To Cart
+</button>
+
+</div>
+
+
+<div class="product">
+
+<div class="image-container">
+<img src="images/RaptorSkelly.jpg" alt="Raptor Skelly">
+</div>
+
+<h2>Raptor Skelly</h2>
+
+<label>Style:</label>
+
+<select id="raptorStyle">
+
+<option value="Multicolor Small">
+Multicolor Small - $7
+</option>
+
+<option value="Multicolor Large">
+Multicolor Large - $14
+</option>
+
+<option value="Single Color Small">
+Single Color Small - $4
+</option>
+
+<option value="Single Color Large">
+Single Color Large - $8
+</option>
+
+</select>
+
+<button onclick="addRaptorToCart()">
+Add To Cart
+</button>
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<div id="cart" class="cart">
+
+<button
+onclick="toggleCart()">
+Close ✖
+</button>
+
+<h2>Your Cart</h2>
+
+<ul id="cart-items"></ul>
+
+<label>
+Shipping Method
+</label>
+
+<select
+id="shippingMethod"
+onchange="updateCart()">
+
+<option value="ship">
+USPS Shipping
+</option>
+
+<option value="pickup">
+Local Pickup
+</option>
+
+</select>
+
+<br><br>
+
+<label>
+ZIP Code
+</label>
+
+<input
+type="text"
+id="zip"
+placeholder="Enter ZIP Code"
+oninput="updateCart()">
+
+<br><br>
+<label>
+Discount Code
+</label>
+
+<input
+type="text"
+id="coupon">
+
+<button
+onclick="applyCoupon()">
+Apply
+</button>
+
+<p>
+Discount:
+$<span id="discount">0</span>
+</p>
+
+<p>
+Subtotal:
+$<span id="subtotal">0</span>
+</p>
+
+<p>
+Tax:
+$<span id="tax">0</span>
+</p>
+
+<p>
+Shipping:
+$<span id="shipping">0</span>
+</p>
+
+<p>
+<strong>
+Total:
+$<span id="total">0</span>
+</strong>
+</p>
+
+<button
+onclick="checkout()">
+Checkout With PayPal
+</button>
+
+<button
+onclick="clearCart()">
+Clear Cart
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
