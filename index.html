@@ -2,26 +2,214 @@
 <html>
 
 <head>
-<title>Katz 3D Kreationz</title>
+
+<title>Katz 3D Kreationz | Custom 3D Printed Gifts & Collectibles</title>
 
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
+<meta name="description"
+content="Katz 3D Kreationz creates custom 3D printed gifts, Animals With Attitude figurines, collectibles, patriotic decor, and custom lithophanes.">
+
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+/* =========================
+   STORE ENHANCEMENTS
+========================= */
+
+.shop-tools {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.category-nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.category-nav a:hover {
+    opacity: 0.85;
+}
+
+.product-search {
+    display: block;
+    width: min(600px, 100%);
+    margin: 0 auto;
+    padding: 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-message {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+    display: none;
+}
+
+.product {
+    position: relative;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #222;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.image-container img {
+    cursor: zoom-in;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.image-modal.open {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.5);
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: 0;
+    background: #fff;
+    color: #111;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.customer-info {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.customer-info h3 {
+    margin-top: 0;
+}
+
+.customer-info .field {
+    margin-bottom: 12px;
+}
+
+.customer-info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.customer-info input,
+.customer-info select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.customer-info .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.checkout-note {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.no-results {
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .customer-info .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .category-nav a {
+        flex: 1 1 140px;
+        text-align: center;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="top-header">
 
 <div class="logo-area">
+
 <img src="images/logo.png"
 alt="Katz 3D Kreationz Logo">
 
 <div class="site-text">
+
 <h1>Katz 3D Kreationz</h1>
+
 <p>Custom 3D Printed Gifts & Collectibles</p>
+
 <p>Email: katz3dkreationz@gmail.com</p>
+
 </div>
 
 </div>
@@ -35,15 +223,35 @@ onclick="toggleCart()">
 
 </header>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav class="navbar">
 
-<a href="#">Home</a>
-<a href="#">Shop</a>
+<a href="index.html">
+Home
+</a>
+
+<a href="#shop">
+Shop
+</a>
+
 <a href="lithophane.html">
 Lithophanes
 </a>
 
+<a href="track.html">
+Track Order
+</a>
+
 </nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero-banner">
 
@@ -57,24 +265,73 @@ Custom Lithophanes • Collectibles • Gifts
 
 </section>
 
-<h2 class="category-title">
+
+<!-- =========================
+     SHOP TOOLS
+========================= -->
+
+<div class="shop-tools">
+
+<div class="category-nav">
+
+<a href="#animals">🦁 Animals With Attitude</a>
+
+<a href="#holidays">🎃 Holidays With Attitude</a>
+
+<a href="#critters">🧸 Critters & Collectibles</a>
+
+<a href="#articulated">🦖 Articulated & Fantasy</a>
+
+<a href="#patriotic">🦅 Patriotic</a>
+
+</div>
+
+<input
+type="search"
+id="productSearch"
+class="product-search"
+placeholder="🔍 Search products..."
+aria-label="Search products">
+
+<div
+id="searchMessage"
+class="search-message">
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     ANIMALS WITH ATTITUDE
+========================= -->
+
+<h2 class="category-title" id="animals">
+
 🦁 Animals With Attitude™
 </h2>
 
 <section class="products">
 
-<!-- FOX SAKE -->
+
+<!-- FOX -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/fox_sake.jpg" alt="Fox">
+
+<img src="images/fox_sake.jpg"
+alt="Fox">
+
 </div>
 
 <h2>Fox</h2>
 
 <p>Included Sign:</p>
 
-<p><strong>For Fox Sake</strong></p>
+<p>
+<strong>For Fox Sake</strong>
+</p>
 
 <p>$10</p>
 
@@ -84,38 +341,43 @@ Add To Cart
 
 </div>
 
+
 <!-- BAA BYE -->
 
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/baa-bye.jpg"
 alt="Baa Bye">
+
 </div>
 
 <h2>Baa Bye</h2>
 
 <p>$10</p>
 
-<button
-onclick="addToCart('Baa Bye',10)">
+<button onclick="addToCart('Baa Bye',10)">
 Add To Cart
 </button>
 
 </div>
+
 
 <!-- QUACK OFF -->
 
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/quack-off.jpg"
 alt="Quack Off">
+
 </div>
 
 <h2>Quack Off</h2>
 
-<label>Color:</label>
+<label>Choose Color:</label>
 
 <select id="quackColor">
 
@@ -131,25 +393,27 @@ White
 
 <p>$10</p>
 
-<button
-onclick="addQuackToCart()">
+<button onclick="addQuackToCart()">
 Add To Cart
 </button>
 
 </div>
+
 
 <!-- NO PROB LLAMA -->
 
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/no-prob-llama.jpg"
 alt="No Prob Llama">
+
 </div>
 
 <h2>No Prob Llama</h2>
 
-<label>Color:</label>
+<label>Choose Color:</label>
 
 <select id="llamaColor">
 
@@ -165,24 +429,29 @@ Brown
 
 <p>$12</p>
 
-<button
-onclick="addLlamaToCart()">
+<button onclick="addLlamaToCart()">
 Add To Cart
 </button>
 
 </div>
+
 
 <!-- NOT TODAY -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/not-today.jpg" alt="Not Today">
+
+<img src="images/not-today.jpg"
+alt="Not Today">
+
 </div>
 
 <h2>Not Today</h2>
 
-<p><strong>Included Sign:</strong></p>
+<p>
+<strong>Included Sign:</strong>
+</p>
 
 <p>Not Today</p>
 
@@ -193,17 +462,22 @@ Add To Cart
 </button>
 
 </div>
+
+
 <!-- RHINO -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/Rhino.jpg" alt="Rhino">
+
+<img src="images/Rhino.jpg"
+alt="Rhino">
+
 </div>
 
 <h2>Rhino</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="rhinoSign">
 
@@ -229,16 +503,21 @@ Add To Cart
 
 </div>
 
+
 <!-- GOAT -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/goat_awa.jpg" alt="Goat">
+
+<img src="images/goat_awa.jpg"
+alt="Goat">
+
 </div>
 
 <h2>Goat</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="goatSign">
 
@@ -269,57 +548,83 @@ Add To Cart
 </div>
 
 
+<!-- HOP OFF -->
+
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/hop_off.jpg"
 alt="Hop Off">
+
 </div>
 
 <h2>Hop Off</h2>
 
 <p>$10</p>
 
-<button
-onclick="addToCart('Hop Off',10)">
+<button onclick="addToCart('Hop Off',10)">
 Add To Cart
 </button>
 
 </div>
 
+
+<!-- ZERO CLUCK -->
+
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/zero_cluck.jpg"
 alt="Zero Cluck">
+
 </div>
 
 <h2>Zero Cluck</h2>
 
 <p>$10</p>
 
-<button
-onclick="addToCart('Zero Cluck',10)">
+<button onclick="addToCart('Zero Cluck',10)">
 Add To Cart
 </button>
 
 </div>
 
+
+<!-- DONKEY -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/donkey.jpg" alt="Donkey">
+
+<img src="images/donkey.jpg"
+alt="Donkey">
+
 </div>
 
 <h2>Donkey</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="donkeySign">
-<option value="You're the ASS">You're the ASS</option>
-<option value="Smart Ass">Smart Ass</option>
-<option value="Don't Be an Ass">Don't Be an Ass</option>
-<option value="Don't ASS/U/ME">Don't ASS/U/ME</option>
+
+<option value="You're the ASS">
+You're the ASS
+</option>
+
+<option value="Smart Ass">
+Smart Ass
+</option>
+
+<option value="Don't Be an Ass">
+Don't Be an Ass
+</option>
+
+<option value="Don't ASS/U/ME">
+Don't ASS/U/ME
+</option>
+
 </select>
 
 <p>$10</p>
@@ -329,19 +634,33 @@ Add To Cart
 </button>
 
 </div>
+
+
+<!-- STINKIN TIRED -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/stinkin-tired.jpg" alt="Stinkin Tired">
+
+<img src="images/stinkin-tired.jpg"
+alt="Stinkin Tired">
+
 </div>
 
 <h2>Stinkin Tired</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="stinkinSign">
-<option value="Stinkin Tired">Stinkin Tired</option>
-<option value="This Stinks">This Stinks</option>
+
+<option value="Stinkin Tired">
+Stinkin Tired
+</option>
+
+<option value="This Stinks">
+This Stinks
+</option>
+
 </select>
 
 <p>$12</p>
@@ -351,16 +670,22 @@ Add To Cart
 </button>
 
 </div>
+
+
+<!-- EAT MORE BEEF -->
+
 <div class="product">
 
 <div class="image-container">
+
 <img src="images/eat-more-beef.jpg"
 alt="Eat More Beef">
+
 </div>
 
 <h2>Eat More Beef</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="beefSign">
 
@@ -390,15 +715,21 @@ Add To Cart
 
 </div>
 
+
+<!-- SNAKE -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/snake.jpg" alt="Snake">
+
+<img src="images/snake.jpg"
+alt="Snake">
+
 </div>
 
 <h2>Snake</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="snakeSign">
 
@@ -424,17 +755,21 @@ Add To Cart
 
 </div>
 
+
 <!-- PLAY DEAD -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/play-dead.jpg" alt="Play Dead">
+
+<img src="images/play-dead.jpg"
+alt="Play Dead">
+
 </div>
 
 <h2>Play Dead</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="playDeadSign">
 
@@ -456,17 +791,21 @@ Add To Cart
 
 </div>
 
+
 <!-- UNBEARABLE -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/unbearable.jpg" alt="Unbearable">
+
+<img src="images/unbearable.jpg"
+alt="Unbearable">
+
 </div>
 
 <h2>Unbearable</h2>
 
-<label>Bear Color:</label>
+<label>Choose Bear Color:</label>
 
 <select id="unbearableColor">
 
@@ -480,7 +819,7 @@ Brown
 
 </select>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="unbearableSign">
 
@@ -502,17 +841,21 @@ Add To Cart
 
 </div>
 
+
 <!-- OWL -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/Owl.jpg" alt="Owl">
+
+<img src="images/Owl.jpg"
+alt="Owl">
+
 </div>
 
 <h2>Owl</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="owlSign">
 
@@ -533,15 +876,22 @@ Add To Cart
 </button>
 
 </div>
+
+
+<!-- SQUIRREL -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/squirrel.jpg" alt="Squirrel">
+
+<img src="images/squirrel.jpg"
+alt="Squirrel">
+
 </div>
 
 <h2>Squirrel</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="squirrelSign">
 
@@ -562,17 +912,24 @@ Add To Cart
 </button>
 
 </div>
+
+
 <!-- OINK IF I CARE -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/oink-if-i-care.jpg" alt="Oink If I Care">
+
+<img src="images/oink-if-i-care.jpg"
+alt="Oink If I Care">
+
 </div>
 
 <h2>Oink If I Care</h2>
 
-<p><strong>Included Sign:</strong></p>
+<p>
+<strong>Included Sign:</strong>
+</p>
 
 <p>Oink If I Care</p>
 
@@ -590,12 +947,15 @@ Add To Cart
 <div class="product">
 
 <div class="image-container">
-<img src="images/beaver.jpg" alt="Beaver">
+
+<img src="images/beaver.jpg"
+alt="Beaver">
+
 </div>
 
 <h2>Beaver</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="beaverSign">
 
@@ -617,19 +977,21 @@ Add To Cart
 
 </div>
 
-<!-- GIRAFFE -->
 
 <!-- AWA GIRAFFE -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/AWA_Giraffe.jpg" alt="AWA Giraffe">
+
+<img src="images/AWA_Giraffe.jpg"
+alt="AWA Giraffe">
+
 </div>
 
 <h2>AWA Giraffe</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="giraffeSign">
 
@@ -667,17 +1029,21 @@ Add To Cart
 
 </div>
 
+
 <!-- UNICORN -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/awa_unicorn.jpg" alt="Unicorn">
+
+<img src="images/awa_unicorn.jpg"
+alt="Unicorn">
+
 </div>
 
 <h2>Unicorn</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="unicornSign">
 
@@ -701,22 +1067,23 @@ Wish Denied
 Add To Cart
 </button>
 
-
 </div>
 
-<!-- AXOLOTL -->
 
 <!-- AXOLOTL -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/axolotl.png" alt="Axolotl">
+
+<img src="images/axolotl.png"
+alt="Axolotl">
+
 </div>
 
 <h2>Axolotl</h2>
 
-<label>Color:</label>
+<label>Choose Color:</label>
 
 <select id="axolotlColor">
 
@@ -734,7 +1101,7 @@ Multi
 
 </select>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="axolotlSign">
 
@@ -756,18 +1123,21 @@ Add To Cart
 
 </div>
 
-<!-- AWA PANDA -->
-<!-- AWA PANDA -->
+
+<!-- PANDA -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/panda.jpg" alt="Panda">
+
+<img src="images/panda.jpg"
+alt="Panda">
+
 </div>
 
 <h2>Panda</h2>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="pandaSign">
 
@@ -805,30 +1175,54 @@ Add To Cart
 
 </div>
 
+
 <!-- AWA CAT -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/AWA_Cat.jpg" alt="AWA Cat">
+
+<img src="images/AWA_Cat.jpg"
+alt="AWA Cat">
+
 </div>
 
 <h2>AWA Cat</h2>
 
-<label>Color:</label>
+<label>Choose Color:</label>
 
 <select id="awaCatColor">
-<option value="Orange">Orange</option>
-<option value="Gray">Gray</option>
+
+<option value="Orange">
+Orange
+</option>
+
+<option value="Gray">
+Gray
+</option>
+
 </select>
 
-<label>Sign:</label>
+<label>Choose Your Sign:</label>
 
 <select id="awaCatSign">
-<option value="Purrhaps Not">Purrhaps Not</option>
-<option value="Ask The Dog">Ask The Dog</option>
-<option value="I Judge You">I Judge You</option>
-<option value="Feline Frustrated">Feline Frustrated</option>
+
+<option value="Purrhaps Not">
+Purrhaps Not
+</option>
+
+<option value="Ask The Dog">
+Ask The Dog
+</option>
+
+<option value="I Judge You">
+I Judge You
+</option>
+
+<option value="Feline Frustrated">
+Feline Frustrated
+</option>
+
 </select>
 
 <p>$14</p>
@@ -839,9 +1233,227 @@ Add To Cart
 
 </div>
 
+</section>
+
+
+<!-- =========================
+     HOLIDAYS WITH ATTITUDE
+========================= -->
+
+<h2 class="category-title" id="holidays">
+
+🎃 Holidays With Attitude™
+
+</h2>
+
+<section class="products">
+
+
+<!-- GHOST -->
+
 <div class="product">
+
 <div class="image-container">
-<img src="images/AlienPug.jpg" alt="Alien Pug">
+
+<img src="images/ghost.jpg"
+alt="Ghost">
+
+</div>
+
+<h2>Ghost</h2>
+
+<label>Choose Your Sign:</label>
+
+<select id="ghostSign">
+
+<option value="Sheet Happens">
+Sheet Happens
+</option>
+
+<option value="All Outta Boos">
+All Outta Boos
+</option>
+
+<option value="You've Been Ghosted">
+You've Been Ghosted
+</option>
+
+<option value="Currently Unavailable">
+Currently Unavailable
+</option>
+
+<option value="Boo... Hoo">
+Boo... Hoo
+</option>
+
+</select>
+
+<p>$8</p>
+
+<button onclick="addGhostToCart()">
+Add To Cart
+</button>
+
+</div>
+
+<!-- MUMMY -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/mummy.jpg"
+alt="Mummy">
+
+</div>
+
+<h2>Mummy</h2>
+
+<label>Choose Your Sign:</label>
+
+<select id="mummySign">
+
+<option value="Dead Inside">
+Dead Inside
+</option>
+
+<option value="Wrapped Up">
+Wrapped Up
+</option>
+
+</select>
+
+<p>$8</p>
+
+<button onclick="addMummyToCart()">
+Add To Cart
+</button>
+
+</div>
+<!-- ZOMBIE -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/zombie.jpg"
+alt="Zombie">
+
+</div>
+
+<h2>Zombie</h2>
+
+<label>Choose Your Sign:</label>
+
+<select id="zombieSign">
+
+<option value="Brain Dead">
+Brain Dead
+</option>
+
+<option value="Need Coffee">
+Need Coffee
+</option>
+
+<option value="Everything's Fine">
+Everything's Fine
+</option>
+
+<option value="Grave Mistake">
+Grave Mistake
+</option>
+
+<option value="You Smell Smart">
+You Smell Smart
+</option>
+
+<option value="Dig It">
+Dig It
+</option>
+
+<option value="No Sick Days">
+No Sick Days
+</option>
+
+<option value="I'm Killing It">
+I'm Killing It
+</option>
+
+<option value="Meat & Greet">
+Meat & Greet
+</option>
+
+</select>
+
+<p>$8</p>
+
+<button onclick="addZombieToCart()">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- CANDLE -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/candle.jpg"
+alt="Holiday Attitude Candle">
+
+</div>
+
+<h2>Candle</h2>
+
+<label>Choose Your Sign:</label>
+
+<select id="candleSign">
+
+<option value="Wick Happens">
+Wick Happens
+</option>
+
+<option value="Melt Down">
+Melt Down
+</option>
+
+</select>
+
+<p>$7</p>
+
+<button onclick="addCandleToCart()">
+Add To Cart
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CRITTERS & COLLECTIBLES
+========================= -->
+
+<h2 class="category-title" id="critters">
+
+🧸 Critters & Collectibles
+
+</h2>
+
+<section class="products">
+
+
+<!-- ALIEN PUG -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/AlienPug.jpg"
+alt="Alien Pug">
+
 </div>
 
 <h2>Alien Pug</h2>
@@ -853,17 +1465,22 @@ Add To Cart
 </button>
 
 </div>
+
+
 <!-- ARCHIE CHIMP -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/ArchieChimp.jpg" alt="Archie Chimp">
+
+<img src="images/ArchieChimp.jpg"
+alt="Archie Chimp">
+
 </div>
 
 <h2>Archie Chimp</h2>
 
-<label>Size:</label>
+<label>Choose Size:</label>
 
 <select id="archieSize">
 
@@ -887,15 +1504,21 @@ Add To Cart
 
 </div>
 
+
+<!-- OLLIE ORANGUTANG -->
+
 <div class="product">
 
 <div class="image-container">
-<img src="images/OllieOrangutang.jpg" alt="Ollie Orangutang">
+
+<img src="images/OllieOrangutang.jpg"
+alt="Ollie Orangutang">
+
 </div>
 
 <h2>Ollie Orangutang</h2>
 
-<label>Size:</label>
+<label>Choose Size:</label>
 
 <select id="ollieSize">
 
@@ -919,64 +1542,45 @@ Add To Cart
 
 </div>
 
+</section>
 
-<!-- LIBERTY EAGLE -->
-<!-- LIBERTY EAGLE USA -->
-<div class="product">
 
-<div class="image-container">
-<img src="images/liberty_eagle_statueusa.jpg"
-alt="Liberty Eagle USA">
-</div>
+<!-- =========================
+     ARTICULATED & FANTASY
+========================= -->
 
-<h2>Liberty Eagle - USA Wings</h2>
+<h2 class="category-title" id="articulated">
 
-<p>$15</p>
+🦖 Articulated & Fantasy Collection
 
-<button onclick="addToCart('Liberty Eagle - USA Wings',15)">
-Add To Cart
-</button>
+</h2>
 
-</div>
+<section class="products">
 
-<!-- LIBERTY EAGLE BROWN -->
+
+<!-- RAPTOR SKELLY -->
 
 <div class="product">
 
 <div class="image-container">
-<img src="images/liberty_eagle_statuebrown.jpg"
-alt="Liberty Eagle Brown">
-</div>
 
-<h2>Liberty Eagle - Brown Wings</h2>
+<img src="images/RaptorSkelly.jpg"
+alt="Raptor Skelly">
 
-<p>$15</p>
-
-<button onclick="addToCart('Liberty Eagle - Brown Wings',15)">
-Add To Cart
-</button>
-
-</div>
-
-
-<div class="product">
-
-<div class="image-container">
-<img src="images/RaptorSkelly.jpg" alt="Raptor Skelly">
 </div>
 
 <h2>Raptor Skelly</h2>
 
-<label>Style:</label>
+<label>Choose Style:</label>
 
 <select id="raptorStyle">
 
 <option value="Multicolor Small">
-Multicolor Small - $7
+Multicolor Small - $6
 </option>
 
 <option value="Multicolor Large">
-Multicolor Large - $14
+Multicolor Large - $12
 </option>
 
 <option value="Single Color Small">
@@ -994,21 +1598,287 @@ Add To Cart
 </button>
 
 </div>
+<!-- KNIGHT SKELLY -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/knight_skelly.jpg"
+alt="Knight Skelly">
+
+</div>
+
+<h2>Knight Skelly</h2>
+
+<p>$7</p>
+
+<button onclick="addToCart('Knight Skelly',7)">
+Add To Cart
+</button>
+
+</div>
+</section>
+
+
+<!-- =========================
+     PATRIOTIC COLLECTION
+========================= -->
+
+<h2 class="category-title" id="patriotic">
+
+🦅 Patriotic Collection
+
+</h2>
+
+<section class="products">
+
+
+<!-- LIBERTY EAGLE USA -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/liberty_eagle_statueusa.jpg"
+alt="Liberty Eagle USA">
+
+</div>
+
+<h2>Liberty Eagle - USA Wings</h2>
+
+<p>$15</p>
+
+<button onclick="addToCart('Liberty Eagle - USA Wings',15)">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- LIBERTY EAGLE BROWN -->
+
+<div class="product">
+
+<div class="image-container">
+
+<img src="images/liberty_eagle_statuebrown.jpg"
+alt="Liberty Eagle Brown">
+
+</div>
+
+<h2>Liberty Eagle - Brown Wings</h2>
+
+<p>$15</p>
+
+<button onclick="addToCart('Liberty Eagle - Brown Wings',15)">
+Add To Cart
+</button>
+
+</div>
 
 </section>
 
-<!-- CART -->
 
-<div id="cart" class="cart">
+
+<!-- =========================
+     IMAGE VIEWER
+========================= -->
+
+<div
+id="imageModal"
+class="image-modal"
+onclick="closeImageModal(event)">
+
+<button
+type="button"
+class="image-modal-close"
+onclick="closeImageModal()"
+aria-label="Close image">
+×
+</button>
+
+<img
+id="modalImage"
+src=""
+alt="Product preview">
+
+</div>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<div id="cart"
+class="cart">
 
 <button
 onclick="toggleCart()">
+
 Close ✖
+
 </button>
 
 <h2>Your Cart</h2>
 
 <ul id="cart-items"></ul>
+
+
+<!-- CUSTOMER INFORMATION -->
+
+<div class="customer-info">
+
+<h3>Customer Information</h3>
+
+<div class="field">
+
+<label for="customerName">
+Name *
+</label>
+
+<input
+type="text"
+id="customerName"
+autocomplete="name"
+placeholder="Your full name">
+
+</div>
+
+<div class="field">
+
+<label for="customerEmail">
+Email *
+</label>
+
+<input
+type="email"
+id="customerEmail"
+autocomplete="email"
+placeholder="you@example.com">
+
+</div>
+
+<div class="field">
+
+<label for="customerPhone">
+Phone (optional)
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+autocomplete="tel"
+placeholder="(555) 555-5555">
+
+</div>
+
+<div class="field">
+
+<label for="customerAddress">
+Shipping Address
+</label>
+
+<input
+type="text"
+id="customerAddress"
+autocomplete="street-address"
+placeholder="Street address">
+
+</div>
+
+<div class="two-column">
+
+<div class="field">
+
+<label for="customerCity">
+City
+</label>
+
+<input
+type="text"
+id="customerCity"
+autocomplete="address-level2"
+placeholder="City">
+
+</div>
+
+<div class="field">
+
+<label for="customerState">
+State
+</label>
+
+<select
+id="customerState"
+autocomplete="address-level1">
+
+<option value="">Select State</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+</select>
+
+</div>
+
+</div>
+
+<p class="checkout-note">
+Your name and email are required. A shipping address is required
+when USPS Shipping is selected. PayPal may also request or confirm
+shipping information during payment.
+</p>
+
+</div>
+
+
 
 <label>
 Shipping Method
@@ -1030,6 +1900,7 @@ Local Pickup
 
 <br><br>
 
+
 <label>
 ZIP Code
 </label>
@@ -1041,6 +1912,8 @@ placeholder="Enter ZIP Code"
 oninput="updateCart()">
 
 <br><br>
+
+
 <label>
 Discount Code
 </label>
@@ -1051,49 +1924,85 @@ id="coupon">
 
 <button
 onclick="applyCoupon()">
+
 Apply
+
 </button>
 
+
 <p>
+
 Discount:
 $<span id="discount">0</span>
+
 </p>
 
+
 <p>
+
 Subtotal:
 $<span id="subtotal">0</span>
+
 </p>
 
+
 <p>
+
 Tax:
 $<span id="tax">0</span>
+
 </p>
 
+
 <p>
+
 Shipping:
 $<span id="shipping">0</span>
+
 </p>
 
+
 <p>
+
 <strong>
+
 Total:
 $<span id="total">0</span>
+
 </strong>
+
+</p>
+
+
+<p class="checkout-note">
+Your order number and selected products are included with the PayPal checkout.
+Your customer information is saved in this browser for order preparation.
 </p>
 
 <button
 onclick="checkout()">
+
 Checkout With PayPal
+
 </button>
+
 
 <button
 onclick="clearCart()">
+
 Clear Cart
+
 </button>
 
 </div>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
